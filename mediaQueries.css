@@ -1,0 +1,45 @@
+/* MOBILE VIEWPORT */
+@media only screen and (max-width: 84em) {
+    .indexSection .text h2 {
+        font-size: 5.6rem;
+      }
+    .timelineBox {
+        width: 100%; /* Adjust the width of timeline boxes to occupy the full width */
+    }
+    .date1::after,
+    .date2::before,
+    .date3::after,
+    .date4::before,
+    .date5::after,
+    .date6::before {
+       transform: translate(-0%);
+    }
+}
+@media only screen and (max-width: 67em) {
+    .indexSection .text h2 {
+        font-size: 5rem;
+      }
+    .timelineBox {
+        width: 100%; /* Adjust the width of timeline boxes to occupy the full width */
+    }
+    .date2::before,
+    .date4::before,
+    .date6::before {
+       transform: translate(30%);
+    }
+    .date1::after,
+ .date3::after,
+.date5::after {
+    transform: translate(-30%);
+}
+}
+
+
+/* TABLET VIEWPORT */
+@media only screen and (max-width: 59em) {
+    
+}
+/* SMALL SCREEN VIEWPORT */
+@media only screen and (max-width: 44em) {
+    
+} 
