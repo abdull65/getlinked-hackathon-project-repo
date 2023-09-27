@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="mediaQueries.css" type="text/css" />
     <title>Getlinked Hackthon</title>
   </head>
-  <body>
+  <body id="body">
     <div id="container">
       <header class="header">
         <div class="logoBox">
@@ -34,10 +34,22 @@
             </li>
           </ul>
         </nav>
+        <div class="navMenuBox">
+          <button class="menuBtn" id="openBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+            width="24" height="24" viewBox="0 0 24 24" 
+            fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+
+          </button>
+          <button class="menuBtn" id="closeBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+            width="24" height="24" viewBox="0 0 24 24" 
+            fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
       </header>
       <div class="hackathonContent">
-        <!-- index Section -->
-        <div id="indexSection" class="indexSection">
+        <div class="ignitingTextBox">
           <p class="ignitingText">Igniting a Revolution in HR Innovation</p>
             <span class="curveLine">
               <svg width="230" height="15" viewBox="0 0 255 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,6 +57,9 @@
                 </svg>
                 
             </span>
+        </div>
+        <!-- index Section -->
+        <div id="indexSection" class="indexSection">
           <div class="text">
             <div class="lensBox">
             </div>
@@ -234,10 +249,12 @@
               </p>
               <ul class="faqListBox">
                 <li class="faqListItem">
+                  <div class="questionBox">
                   <p class="questionParagraph">
                     Can i work on a project i started before the hackathon
-                    <span class="accordionIcon">+</span>
                   </p>
+                  <span class="accordionIcon">+</span>
+                  </div>
                   <p class="answerParagraph">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Vitae vero hic consequatur enim laboriosam, fuga impedit
@@ -245,10 +262,12 @@
                   </p>
                 </li>
                 <li class="faqListItem">
+                  <div class="questionBox">
                   <p class="questionParagraph">
                     What happens if i need help during the hackathon
-                    <span class="accordionIcon">+</span>
                   </p>
+                  <span class="accordionIcon">+</span>
+                  </div>
                   <p class="answerParagraph">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Vitae vero hic consequatur enim laboriosam, fuga impedit
@@ -256,10 +275,12 @@
                   </p>
                 </li>
                 <li class="faqListItem">
+                  <div class="questionBox">
                   <p class="questionParagraph">
                     What happens if i don't have an idea for a project?
-                    <span class="accordionIcon">+</span>
                   </p>
+                  <span class="accordionIcon">+</span>
+                  </div>
                   <p class="answerParagraph">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Vitae vero hic consequatur enim laboriosam, fuga impedit
@@ -267,10 +288,12 @@
                   </p>
                 </li>
                 <li class="faqListItem">
+                  <div class="questionBox">
                   <p class="questionParagraph">
                     Can i join a team or do i have to come with one?
-                    <span class="accordionIcon">+</span>
                   </p>
+                  <span class="accordionIcon">+</span>
+                  </div>
                   <p class="answerParagraph">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Vitae vero hic consequatur enim laboriosam, fuga impedit
@@ -278,10 +301,12 @@
                   </p>
                 </li>
                 <li class="faqListItem">
+                  <div class="questionBox">
                   <p class="questionParagraph">
                     What happens after the hackathon ends
-                    <span class="accordionIcon">+</span>
                   </p>
+                  <span class="accordionIcon">+</span>
+                  </div>
                   <p class="answerParagraph">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Vitae vero hic consequatur enim laboriosam, fuga impedit
@@ -289,10 +314,12 @@
                   </p>
                 </li>
                 <li class="faqListItem">
+                  <div class="questionBox">
                   <p class="questionParagraph">
                     Can i work on a project i started before the hackathon?
-                    <span class="accordionIcon">+</span>
                   </p>
+                  <span class="accordionIcon">+</span>
+                  </div>
                   <p class="answerParagraph">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Vitae vero hic consequatur enim laboriosam, fuga impedit
@@ -835,5 +862,6 @@ Lagos State</a>
   </div>
       </div>
      </div>
+     <script src="script.js" type="text/javascript"></script>
   </body>
 </html>

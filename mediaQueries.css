@@ -2,44 +2,571 @@
 @media only screen and (max-width: 84em) {
     .indexSection .text h2 {
         font-size: 5.6rem;
-      }
-    .timelineBox {
-        width: 100%; /* Adjust the width of timeline boxes to occupy the full width */
     }
+
+    .timelineBox {
+        width: 100%;
+    }
+
     .date1::after,
     .date2::before,
     .date3::after,
     .date4::before,
     .date5::after,
     .date6::before {
-       transform: translate(-0%);
+        transform: translate(-0%);
     }
 }
-@media only screen and (max-width: 67em) {
+
+@media only screen and (max-width: 79em) {
     .indexSection .text h2 {
         font-size: 5rem;
-      }
-    .timelineBox {
-        width: 100%; /* Adjust the width of timeline boxes to occupy the full width */
     }
+
+    .centerLine {
+        height: 100%;
+    }
+
+    .timelineBox {
+        width: 100%;
+    }
+
+    .date1::before,
+    .date3::before,
+    .date5::before {
+        padding: 0 !important;
+        left: 0 !important;
+        top: 0 !important;
+        transform: translateX(-70px);
+        height: 6rem !important;
+        width: 6rem !important;
+    }
+
+    .date2::after,
+
+    .date4::after,
+
+    .date6::after {
+        top: 0 !important;
+        left: 0 !important;
+        padding: 0 !important;
+        transform: translateX(-70px);
+        height: 6rem !important;
+        width: 6rem !important;
+    }
+
     .date2::before,
     .date4::before,
-    .date6::before {
-       transform: translate(30%);
-    }
+    .date6::before,
     .date1::after,
- .date3::after,
-.date5::after {
-    transform: translate(-30%);
-}
+    .date3::after,
+    .date5::after {
+        top: 0 !important;
+        left: 3.1rem;
+        transform: translateX(-70px);
+        height: 3rem;
+        width: 3rem;
+    }
+
 }
 
 
 /* TABLET VIEWPORT */
-@media only screen and (max-width: 59em) {
-    
+@media only screen and (max-width: 72em) {
+    img {
+        width: 100%;
+    }
+
+    .indexSection {
+        padding-left: 6rem;
+
+    }
+
+    #introductionSection,
+    #ruleSection,
+    #criteriaSection,
+    #faqSection,
+    #timelineSecition,
+    #prizeSection,
+    #partnerSection,
+    #privacySection,
+    #footerSection,
+    #contactSection {
+        padding: 10rem 8rem;
+    }
+
+    .indexSection .text h2 {
+        font-size: 4.6rem;
+    }
 }
+
 /* SMALL SCREEN VIEWPORT */
-@media only screen and (max-width: 44em) {
-    
-} 
+@media only screen and (max-width: 67em) {
+    .header {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .navBar {
+        width: 70%;
+    }
+
+    .indexSection {
+        padding-left: 4rem;
+        padding-top: 2rem;
+
+    }
+
+    #introductionSection,
+    #ruleSection,
+    #criteriaSection,
+    #faqSection,
+    #timelineSecition,
+    #prizeSection,
+    #partnerSection,
+    #privacySection,
+    #footerSection,
+    #contactSection {
+        padding: 8rem 2rem;
+    }
+}
+
+/*  */
+@media only screen and (max-width: 63em) {
+
+    /* ****************** MOBILE NAVIGATION ********************* */
+
+
+    .openMenu#body {
+        background-color: rgb(21, 14, 40, .7);
+    }
+
+    .header {
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .navBar {
+        display: block;
+        background-image: linear-gradient(90deg, #d434fe, #7F00FF);
+        margin-top: 4rem;
+        margin-left: -4rem;
+        transform: translateX(-300%);
+        width: 300px;
+        padding: 4rem 2rem;
+        transition: 200ms ease-in-out;
+        z-index: 99999;
+        opacity: 1;
+        border-bottom-right-radius: 15px;
+    }
+
+    .openMenu.navBar {
+        transform: translateX(0);
+    }
+
+    .navList {
+        font-size: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .navList:last-child {
+        display: block;
+        margin-left: 0;
+        margin-top: 4rem;
+        text-align: center;
+        padding: 1rem;
+        margin-left: 1rem;
+    }
+
+
+
+    .listBox {
+        flex-direction: column;
+    }
+
+    .navMenuBox {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+
+    .menuBtn {
+        cursor: pointer;
+        transition: 100ms;
+    }
+
+    .menuBtn svg {
+        stroke: #d434fe;
+    }
+
+    .menuBtn {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        transform: translate(-50%);
+        background-color: #fff;
+        z-index: 10101090;
+    }
+
+    #closeBtn {
+        display: none;
+    }
+
+    .openMenu#closeBtn {
+        display: block;
+    }
+
+
+
+    /* ********************************************** */
+    .indexSection .text h2 {
+        font-size: 4rem;
+    }
+
+    #introductionSection,
+    #ruleSection,
+    #criteriaSection,
+    #faqSection,
+    #timelineSecition,
+    #prizeSection,
+    #partnerSection,
+    #privacySection,
+    #footerSection,
+    #contactSection {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+
+
+    .criteriaImg,
+    .faqImg {
+        margin-top: 4rem;
+    }
+
+    .privacyImgBox {
+        width: 100%;
+        height: 100%;
+    }
+
+    .privacyImgBox::before {
+        margin-top: 5rem;
+        width: 58%;
+        background-position: top center;
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%);
+    }
+
+    .privacyImg {
+        transform: scale(.8);
+        margin-top: -10rem;
+
+    }
+
+    .indexSection {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0rem;
+    }
+
+    .indexSection .text {
+        width: 100%;
+        align-items: center;
+    }
+
+    .indexParagraph {
+        padding-right: 2rem;
+        font-size: 2rem;
+        width: 70%;
+        text-align: center;
+    }
+
+    .indexSection .image {
+        width: 100%;
+    }
+
+    .timelineHeading {
+        width: 50%;
+    }
+
+    .detail {
+        width: 50%;
+        justify-content: flex-start;
+        padding: 2rem;
+    }
+
+    .detail .topic {
+        font-size: 1.8rem;
+    }
+
+    .questionParagraph {
+        font-size: 1rem;
+    }
+
+    .questionParagraph {
+        font-size: 1rem;
+    }
+}
+
+/*  */
+@media only screen and (max-width: 54em) {
+
+    .introContent,
+    .ruleContent,
+    .criteriaContent,
+    .faqContent,
+    .prizeContent,
+    .privacyContent,
+    .contactContent {
+        grid-template-columns: 1fr;
+        align-items: center;
+        row-gap: 4rem;
+    }
+
+    .indexSection .text h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .prizeTextBox h3,
+    .partnerTextBox h3,
+    .privacyTextHeading h3 {
+        font-size: 2.6rem;
+    }
+
+    .ignitingTextBox {
+        font-size: 1.8rem;
+        z-index: 9999;
+        margin: 1rem auto;
+    }
+
+    .curveLine {
+        z-index: 9999;
+    }
+
+    .curveLine svg {
+        width: 150px;
+    }
+
+    .countDownBox {
+        margin-top: 4rem;
+    }
+
+    .privacyImg {
+        margin-top: 15rem;
+        transform: scale(.8);
+        margin-top: 10rem;
+        width: inherit;
+        height: inherit;
+    }
+
+    .privacyImgBox::before {
+        width: 100%;
+        margin-top: 5rem;
+        bottom: 0;
+    }
+
+    .partnerTextBox {
+        width: 100%;
+    }
+
+    .contactTextBox {
+        font-size: 1.4rem;
+        padding-right: 0rem;
+    }
+
+    .fColumnParagraph {
+        margin-bottom: 2rem;
+    }
+
+    .footerBox:first-child {
+        padding-right: 0rem;
+        grid-column: span 3;
+        margin-bottom: 4rem;
+    }
+
+    .footerBox:last-child {
+        grid-column: span 2;
+    }
+
+    .socialIconBox {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .socialLebel {
+        margin-right: 0;
+    }
+
+    .socialIconParagraph {
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+
+    .timelineBox {
+        align-items: flex-start;
+        flex-direction: column !important;
+        gap: 0;
+        padding-left: 1rem;
+    }
+
+    .centerLine {
+        left: 0;
+    }
+
+    .alignRight {
+        text-align: left;
+    }
+
+    .timelineDate {
+        width: 100%;
+        padding: 2rem;
+        padding-top: 0;
+    }
+
+    .detail {
+        width: 100%;
+    }
+}
+
+/*  */
+@media only screen and (max-width: 37em) {
+    .header {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    #introductionSection,
+    #ruleSection,
+    #criteriaSection,
+    #faqSection,
+    #timelineSecition,
+    #prizeSection,
+    #partnerSection,
+    #privacySection,
+    #footerSection,
+    #contactSection {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .introTextBox h3,
+    .ruleTextBox h3,
+    .criteriaTextBox h3,
+    .faqTextBox h3,
+    .prizeTextBox h3,
+    .partnerTextBox h3,
+    .privacyTextHeading h3 {
+        font-size: 2rem;
+    }
+
+    .indexSection .text h2 {
+        font-size: 2rem;
+    }
+
+    .indexSection .text {
+        margin-top: 0;
+    }
+
+    .indexParagraph {
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 2rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .ignitingText {
+        font-size: 1.4rem;
+        text-align: center;
+        margin: 2rem auto;
+    }
+
+    .curveLine {
+        width: 5rem;
+        top: 3rem;
+        left: 50%;
+        transform: translateX(15px);
+    }
+
+    .criteriaTextBox h3,
+    .faqTextBox h3,
+    .prizeTextBox h3,
+    .partnerTextBox h3,
+    .privacyTextHeading h3 {
+        font-size: 2.2rem;
+        display: inline-flex;
+        flex-direction: row;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+    }
+
+    .criteriaList {
+        font-size: 1.2rem;
+    }
+
+    .faqParagraph {
+        font-size: 1.4rem;
+    }
+
+    .criteriaImg,
+    .faqImg {
+        transform: scale(1);
+    }
+
+    .introParagraph,
+    .ruleParagraph {
+        font-size: 1.2rem;
+    }
+
+    .questionBox {
+        padding-right: 1rem;
+    }
+
+    .questionParagraph {
+        font-size: 1.2rem;
+    }
+
+    .accordionIcon {
+        font-size: 1.6rem;
+    }
+
+    .timelineHeading {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    .timelineHeading p {
+        font-size: 1.4rem;
+        width: 90%;
+    }
+
+    .prizeTextBox {
+        padding-right: 0;
+    }
+
+    .prizeTextBox p,
+    .partnerParagraph {
+        font-size: 1.4rem;
+    }
+
+    .detail .topicText {
+        font-size: 1.2rem;
+    }
+
+    .contactFormBox {
+
+        padding: 4rem 2rem;
+
+    }
+}
