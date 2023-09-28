@@ -1,8 +1,5 @@
 /* MOBILE VIEWPORT */
 @media only screen and (max-width: 84em) {
-    .indexSection .text h2 {
-        font-size: 5.6rem;
-    }
 
     .timelineBox {
         width: 100%;
@@ -86,7 +83,7 @@
     #ruleSection,
     #criteriaSection,
     #faqSection,
-    #timelineSecition,
+    #timelineSection,
     #prizeSection,
     #partnerSection,
     #privacySection,
@@ -121,7 +118,7 @@
     #ruleSection,
     #criteriaSection,
     #faqSection,
-    #timelineSecition,
+    #timelineSection,
     #prizeSection,
     #partnerSection,
     #privacySection,
@@ -134,8 +131,126 @@
 /*  */
 @media only screen and (max-width: 63em) {
 
-    /* ****************** MOBILE NAVIGATION ********************* */
+    .indexSection .text h2 {
+        font-size: 4rem;
+    }
 
+    #introductionSection,
+    #ruleSection,
+    #criteriaSection,
+    #faqSection,
+    #timelineSection,
+    #prizeSection,
+    #partnerSection,
+    #privacySection,
+    #footerSection,
+    #contactSection {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .indexSection {
+        /* flex-direction: column; */
+        align-items: center;
+        padding-left: 4rem;
+    }
+
+    .indexSection .text {
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .indexParagraph {
+        padding-right: 2rem;
+        font-size: 2rem;
+    }
+
+    .indexSection .image {
+        width: 100%;
+    }
+
+    .ignitingText {
+        font-size: 2.4rem;
+    }
+
+    .criteriaImg,
+    .faqImg {
+        margin-top: 4rem;
+        transform: scale(1);
+    }
+
+    .privacyImgBox {
+        width: 100%;
+        height: 100%;
+    }
+
+    .privacyImgBox::before {
+        margin-top: 5rem;
+        width: 58%;
+        background-position: top center;
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%);
+    }
+
+    .privacyImg {
+        transform: scale(.8);
+        margin-top: -10rem;
+
+    }
+
+    .timelineHeading {
+        width: 50%;
+    }
+
+    .detail {
+        width: 50%;
+        justify-content: flex-start;
+        padding: 2rem;
+    }
+
+    .detail .topic {
+        font-size: 1.8rem;
+    }
+
+    .questionParagraph {
+        font-size: 1.4rem;
+    }
+
+    .questionParagraph {
+        font-size: 1.2rem;
+    }
+}
+
+/*  */
+@media only screen and (min-width:52em) and (max-width: 55em) {
+    .curveLine {
+        right: 13% !important;
+    }
+}
+
+
+@media only screen and (max-width: 54em) {
+    .indexSection {
+        flex-direction: column;
+    }
+
+    /* ****************** MOBILE NAVIGATION ********************* */
+    .hackathonContent {
+        padding: 0 2rem;
+    }
+
+    .indexSection .text {
+        width: 100%;
+        margin-top: 5rem;
+        align-items: center;
+    }
+
+    .indexParagraph {
+        padding-right: 2rem;
+        font-size: 2rem;
+        text-align: center;
+    }
 
     .openMenu#body {
         background-color: rgb(21, 14, 40, .7);
@@ -145,18 +260,19 @@
         position: relative;
         flex-direction: column;
         align-items: flex-start;
+        height: 6rem;
     }
 
 
     .navBar {
         display: block;
         background-image: linear-gradient(90deg, #d434fe, #7F00FF);
-        margin-top: 4rem;
+        margin-top: .3rem;
         margin-left: -4rem;
-        transform: translateX(-300%);
-        width: 300px;
+        width: 100%;
+        transform: translateX(-100%);
         padding: 4rem 2rem;
-        transition: 200ms ease-in-out;
+        transition: 300ms ease-in-out;
         z-index: 99999;
         opacity: 1;
         border-bottom-right-radius: 15px;
@@ -189,6 +305,10 @@
     .navMenuBox {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 4rem;
+        width: 4rem;
         position: absolute;
         right: 2rem;
         top: 50%;
@@ -196,23 +316,24 @@
         z-index: 1;
     }
 
-
     .menuBtn {
+        background-color: #fff;
+        position: absolute;
+        /* right: 0; */
+        /* transform: translate(-50%); */
+        width: 100%;
+        height: 100%;
+        padding: .5rem;
+        z-index: 10101090;
         cursor: pointer;
+        border-radius: 5px;
         transition: 100ms;
     }
 
     .menuBtn svg {
         stroke: #d434fe;
-    }
-
-    .menuBtn {
-        position: absolute;
-        right: 1rem;
-        bottom: 1rem;
-        transform: translate(-50%);
-        background-color: #fff;
-        z-index: 10101090;
+        height: 3rem;
+        width: 3rem;
     }
 
     #closeBtn {
@@ -223,101 +344,7 @@
         display: block;
     }
 
-
-
     /* ********************************************** */
-    .indexSection .text h2 {
-        font-size: 4rem;
-    }
-
-    #introductionSection,
-    #ruleSection,
-    #criteriaSection,
-    #faqSection,
-    #timelineSecition,
-    #prizeSection,
-    #partnerSection,
-    #privacySection,
-    #footerSection,
-    #contactSection {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
-
-
-
-    .criteriaImg,
-    .faqImg {
-        margin-top: 4rem;
-    }
-
-    .privacyImgBox {
-        width: 100%;
-        height: 100%;
-    }
-
-    .privacyImgBox::before {
-        margin-top: 5rem;
-        width: 58%;
-        background-position: top center;
-        left: 50%;
-        bottom: 50%;
-        transform: translate(-50%);
-    }
-
-    .privacyImg {
-        transform: scale(.8);
-        margin-top: -10rem;
-
-    }
-
-    .indexSection {
-        flex-direction: column;
-        align-items: center;
-        padding-left: 0rem;
-    }
-
-    .indexSection .text {
-        width: 100%;
-        align-items: center;
-    }
-
-    .indexParagraph {
-        padding-right: 2rem;
-        font-size: 2rem;
-        width: 70%;
-        text-align: center;
-    }
-
-    .indexSection .image {
-        width: 100%;
-    }
-
-    .timelineHeading {
-        width: 50%;
-    }
-
-    .detail {
-        width: 50%;
-        justify-content: flex-start;
-        padding: 2rem;
-    }
-
-    .detail .topic {
-        font-size: 1.8rem;
-    }
-
-    .questionParagraph {
-        font-size: 1rem;
-    }
-
-    .questionParagraph {
-        font-size: 1rem;
-    }
-}
-
-/*  */
-@media only screen and (max-width: 54em) {
 
     .introContent,
     .ruleContent,
@@ -332,7 +359,7 @@
     }
 
     .indexSection .text h2 {
-        font-size: 3rem;
+        /* font-size: 3rem; */
         text-align: center;
     }
 
@@ -343,17 +370,16 @@
     }
 
     .ignitingTextBox {
-        font-size: 1.8rem;
+        font-size: 1.6srem;
         z-index: 9999;
         margin: 1rem auto;
+        text-align: center;
+        align-items: center;
     }
 
     .curveLine {
         z-index: 9999;
-    }
-
-    .curveLine svg {
-        width: 150px;
+        right: 5%;
     }
 
     .countDownBox {
@@ -438,6 +464,12 @@
 }
 
 /*  */
+@media only screen and (max-width: 43em) {
+    .ignitingText {
+        font-size: 2.6rem;
+    }
+}
+
 @media only screen and (max-width: 37em) {
     .header {
         padding-left: 2rem;
@@ -448,14 +480,14 @@
     #ruleSection,
     #criteriaSection,
     #faqSection,
-    #timelineSecition,
+    #timelineSection,
     #prizeSection,
     #partnerSection,
     #privacySection,
     #footerSection,
     #contactSection {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
     }
 
     .introTextBox h3,
@@ -468,33 +500,33 @@
         font-size: 2rem;
     }
 
-    .indexSection .text h2 {
-        font-size: 2rem;
-    }
-
     .indexSection .text {
         margin-top: 0;
     }
 
     .indexParagraph {
         width: 100%;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         padding: 2rem;
         text-align: center;
         margin: 0 auto;
     }
 
     .ignitingText {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         text-align: center;
         margin: 2rem auto;
     }
 
     .curveLine {
-        width: 5rem;
-        top: 3rem;
+        /* width: 0rem; */
+        top: 3.2rem;
         left: 50%;
-        transform: translateX(15px);
+        transform: translateX(0);
+    }
+
+    .curveLine svg {
+        height: 10px !important;
     }
 
     .criteriaTextBox h3,
@@ -568,5 +600,24 @@
 
         padding: 4rem 2rem;
 
+    }
+}
+
+@media only screen and (max-width: 26em) {
+    .ignitingText {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 2rem auto;
+    }
+
+    .curveLine {
+        /* width: 0rem; */
+        top: 2.4rem;
+        left: 43%;
+        transform: translateX(0);
+    }
+
+    .curveLine svg {
+        height: 8px !important;
     }
 }

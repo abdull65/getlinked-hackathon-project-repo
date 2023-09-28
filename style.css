@@ -65,8 +65,8 @@
 
 html {
   font-size: 10px;
-  overflow-x: hidden;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #body {
@@ -76,8 +76,8 @@ html {
   color: var(--cl-text);
   font-size: 1.6rem;
   letter-spacing: 1px;
-  /* transition: background 100ms; */
-
+  overflow-x: hidden;
+  position: relative;
 }
 
 a {
@@ -100,7 +100,7 @@ button {
 
 #container {
   padding-bottom: 5rem;
-  overflow-x: hidden;
+  overflow-x: hiddenó;
 }
 
 .header {
@@ -163,6 +163,7 @@ button {
 
 .navLink {
   color: var(--cl-text);
+  transition: 300ms;
 }
 
 .indexSection {
@@ -171,6 +172,7 @@ button {
   padding-left: 8rem;
   padding-top: 2rem;
   border-bottom: 1px solid var(--cl-border);
+  position: relative;
 }
 
 .indexSection .text {
@@ -280,7 +282,7 @@ button {
 #ruleSection,
 #criteriaSection,
 #faqSection,
-#timelineSecition,
+#timelineSection,
 #prizeSection,
 #partnerSection,
 #privacySection,
@@ -1208,26 +1210,28 @@ input:visited {
 /* icons positioning */
 .indexIcon:nth-child(1) {
   position: absolute;
-  top: 16rem;
+  top: 5rem;
   left: 12rem;
 }
 
 .indexIcon:nth-child(2) {
   position: absolute;
-  top: 35%;
-  left: 41.5%;
+  top: 20%;
+  left: 41%;
 }
 
 .indexIcon:nth-child(3) {
   position: absolute;
-  top: 52%;
+  top: 36%;
   left: 46%;
+  z-index: 1;
 }
 
 .indexIcon:nth-child(4) {
   position: absolute;
-  top: 53%;
-  left: 52%;
+  top: 34%;
+  left: 52.5%;
+  z-index: 1;
 }
 
 .indexIcon:nth-child(5) {
@@ -1637,4 +1641,18 @@ input:visited {
 .regInput::placeholder {
   text-transform: capitalize;
   font-size: 1.2rem;
+}
+
+.backToTopBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: #7F00FF;
+  border-radius: 5px;
+  position: fixed;
+  right: 1rem;
+  bottom: 2rem;
 }
