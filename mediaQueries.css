@@ -1,5 +1,8 @@
 /* MOBILE VIEWPORT */
 @media only screen and (max-width: 84em) {
+    .indexSection .text h2 {
+        font-size: 5.6rem;
+    }
 
     .timelineBox {
         width: 100%;
@@ -359,7 +362,7 @@
     }
 
     .indexSection .text h2 {
-        /* font-size: 3rem; */
+        font-size: 3rem;
         text-align: center;
     }
 
@@ -498,6 +501,11 @@
     .partnerTextBox h3,
     .privacyTextHeading h3 {
         font-size: 2rem;
+    }
+
+    .indexSection {
+        padding-right: 0;
+        padding-left: 0;
     }
 
     .indexSection .text {
