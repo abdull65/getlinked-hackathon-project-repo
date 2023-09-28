@@ -236,6 +236,7 @@
 @media only screen and (max-width: 54em) {
     .indexSection {
         flex-direction: column;
+        margin-top: 4rem;
     }
 
     /* ****************** MOBILE NAVIGATION ********************* */
