@@ -439,7 +439,7 @@ button {
   margin-top: 2rem;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1s ease;
+  transition: max-height .3s ease;
 }
 
 .faqListItem.active .answerBox {
