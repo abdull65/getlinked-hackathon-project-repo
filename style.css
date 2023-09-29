@@ -399,7 +399,7 @@ button {
 
 .faqListItem {
   margin-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--cl-sec-1);
 }
 
@@ -435,9 +435,15 @@ button {
   z-index: 1;
 }
 
-.answerParagraph {
+.answerBox {
   margin-top: 2rem;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
+}
+
+.faqListItem.active .answerBox {
+  max-height: 300px;
 }
 
 /* timeline section */

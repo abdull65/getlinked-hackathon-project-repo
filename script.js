@@ -28,3 +28,17 @@ navLinkEl.forEach((link) => {
     });
   }
 });
+
+///////////////////////////////////////////////
+const faqEl = document.querySelectorAll(".faqListItem");
+const faqAnsEl = document.querySelectorAll(".answerBox");
+faqEl.forEach((question) => {
+  question.addEventListener("click", () => {
+    question.classList.toggle("active");
+    faqAnsEl.forEach((answer) => {
+      if (answer.classList.contains("active")) {
+        question.classList.remove("active");
+      }
+    });
+  });
+});
