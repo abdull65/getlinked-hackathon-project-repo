@@ -403,6 +403,10 @@ button {
   border-bottom: 1px solid var(--cl-sec-1);
 }
 
+.faqListItem:last-child {
+  border: none;
+}
+
 .faqListItem {
   display: flex;
   flex-direction: column;
@@ -414,10 +418,12 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .questionParagraph {
   font-size: 1.4rem;
+  color: var(--cl-sec-1);
 
 }
 
@@ -427,12 +433,27 @@ button {
   margin-bottom: 4rem;
 }
 
+.accordionIconBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 1rem;
+}
+
 .accordionIcon {
   color: var(--cl-sec-1);
+  font-size: 2rem;
   font-weight: 600;
   right: 0;
   cursor: pointer;
   z-index: 1;
+  position: absolute;
+  display: block;
+}
+
+.faqListItem.active .openAnswer {
+  display: none;
 }
 
 .answerBox {
@@ -443,7 +464,7 @@ button {
 }
 
 .faqListItem.active .answerBox {
-  max-height: 300px;
+  max-height: 100%;
 }
 
 /* timeline section */

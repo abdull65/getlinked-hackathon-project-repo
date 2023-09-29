@@ -32,13 +32,20 @@ navLinkEl.forEach((link) => {
 ///////////////////////////////////////////////
 const faqEl = document.querySelectorAll(".faqListItem");
 const faqAnsEl = document.querySelectorAll(".answerBox");
+const openAnswer = document.querySelectorAll(".openAnswer");
+const closeAnswer = document.querySelectorAll(".closeAnswer");
 faqEl.forEach((question) => {
-  question.addEventListener("click", () => {
-    question.classList.toggle("active");
-    faqAnsEl.forEach((answer) => {
-      if (answer.classList.contains("active")) {
-        question.classList.remove("active");
-      }
+  question.addEventListener("click", (event) => {
+    event.stopPropagation();
+    faqEl.forEach((q) => {
+      q.classList.remove("active");
     });
+    question.classList.toggle("active");
   });
 });
+// bodyEl.addEventListener("click", () => {
+//   if (question.classList.contains("active")) {
+//     question.classList.remove("active");
+//     console.log("working");
+//   }
+// });
