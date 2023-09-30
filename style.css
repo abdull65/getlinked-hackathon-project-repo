@@ -93,14 +93,16 @@ button {
   cursor: pointer;
 }
 
-.link {
+.link,
+a {
   color: var(--cl-text);
   transition: 300;
+  cursor: pointer;
 }
 
 #container {
   padding-bottom: 5rem;
-  overflow-x: hiddenó;
+  overflow-x: hidden;
 }
 
 .header {
@@ -111,6 +113,25 @@ button {
   align-items: flex-end;
   justify-content: space-between;
   padding: 1rem 8rem 1.8rem;
+  width: 100%;
+}
+
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+
+  background-color: #150E28;
+  z-index: 9999999999999;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.7);
+  border: none;
+}
+
+.sticky #indexSection {
+  margin-top: 8rem;
 }
 
 .navMenuBox {
@@ -129,6 +150,7 @@ button {
 }
 
 .logo a {
+  font-family: "GrandisExtended", sans-serif;
   display: inline-block;
   color: var(--cl-text);
 }
@@ -158,12 +180,21 @@ button {
   margin-left: auto;
   padding: 0 3rem;
   border-radius: 5px;
+  cursor: pointer;
 
 }
 
 .navLink {
   color: var(--cl-text);
   transition: 300ms;
+  cursor: pointer;
+}
+
+.current {
+  background: linear-gradient(90deg, #d434fe, #ff26b9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .indexSection {
@@ -210,6 +241,7 @@ button {
   height: 5rem;
   margin-top: 4rem;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .indexSection .text h2 span {
@@ -1552,11 +1584,54 @@ input:visited {
 
 /* registration form */
 #registerSection {
-  padding: 10rem 12rem;
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  height: 100vh;
+  background-color: #150E28;
+  z-index: 999999999;
+  padding: 0 8rem 10rem;
+}
+
+#registerSection .header {
+  height: 6.8rem;
+  border: none;
+  padding: 0 2rem 0 8rem;
+  align-items: center;
+}
+
+#registerSection .navList {
+  font-size: 1.6rem;
+}
+
+#registerSection .header .navList:last-child {
+  position: relative;
+  background: #150E28;
+}
+
+#registerSection .header .navList:last-child::before {
+  content: "";
+  background: linear-gradient(to bottom, #d434fe 50%, #ff26b9 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: 5px;
+
 }
 
 .registerContent {
   font-family: "Madani Arabic Regular", 'Segoe UI', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  padding: 2rem;
 }
 
 .formHeading {
@@ -1566,12 +1641,13 @@ input:visited {
 
 .formHeading h3 {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .formHeading h3:last-child {
   font-family: "Madani Arabic Regular", 'Segoe UI', sans-serif;
   color: var(--cl-text);
+  margin-bottom: 1rem;
 }
 
 .formHeading p {
@@ -1606,11 +1682,6 @@ input:visited {
   margin-bottom: -0.5rem
 }
 
-.registerContent {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-}
-
 .regImg {
   width: 100%;
 }
@@ -1618,15 +1689,16 @@ input:visited {
 .formTextBox {
   display: flex;
   flex-direction: column;
-  padding: 6rem;
+  padding: 4rem;
   background-color: rgba(255, 255, 255, 0.01);
+  border-radius: 10px;
 }
 
 .registerForm {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
-  row-gap: 2rem;
+  row-gap: 1.5rem;
 
 }
 

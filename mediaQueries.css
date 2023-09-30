@@ -161,7 +161,8 @@
     #partnerSection,
     #privacySection,
     #footerSection,
-    #contactSection {
+    #contactSection,
+    #registerSection {
         padding: 8rem 2rem;
     }
 
@@ -339,6 +340,8 @@
 
 
 @media only screen and (max-width: 54em) {
+
+
     .indexSection {
         flex-direction: column;
         margin-top: 4rem;
@@ -375,7 +378,8 @@
 
     .navBar {
         display: block;
-        background-image: linear-gradient(90deg, #d434fe, #7F00FF);
+        /* background-image: linear-gradient(90deg, #d434fe, #7F00FF); */
+        background-color: #150E28;
         margin-top: .3rem;
         margin-left: -4rem;
         width: 100%;
@@ -453,6 +457,15 @@
         display: block;
     }
 
+    /* sticky navigation */
+    .sticky .header {
+        height: 6rem;
+    }
+
+    .sticky #indexSection {
+        margin-top: 4rem;
+    }
+
     /* ********************************************** */
 
     .introContent,
@@ -461,7 +474,8 @@
     .faqContent,
     .prizeContent,
     .privacyContent,
-    .contactContent {
+    .contactContent,
+    .registerContent {
         grid-template-columns: 1fr;
         align-items: center;
         row-gap: 4rem;
@@ -601,6 +615,15 @@
     .indexIcon:nth-child(4) {
         top: 12%;
         left: 94%;
+    }
+
+    .registerForm {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formTextBox {
+        padding: 2rem 1rem;
     }
 }
 

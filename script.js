@@ -43,9 +43,48 @@ faqEl.forEach((question) => {
     question.classList.toggle("active");
   });
 });
-// bodyEl.addEventListener("click", () => {
-//   if (question.classList.contains("active")) {
-//     question.classList.remove("active");
-//     console.log("working");
-//   }
-// });
+
+// Sticky navigation
+const stickyIntersectionEl = document.querySelector("#indexSection");
+const stickyObs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    }
+
+    if (ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+stickyObs.observe(stickyIntersectionEl);
+
+///////////////////////////////////////////////////
+const sectionEl = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navLink");
+
+window.onscroll = () => {
+  sectionEl.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach((links) => {
+        links.classList.remove("current");
+        document
+          .querySelector("nav a[href*=" + id + "]")
+          .classList.add("current");
+      });
+    }
+  });
+};

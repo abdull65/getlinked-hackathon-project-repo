@@ -59,7 +59,7 @@
             </span>
         </div>
         <!-- index Section -->
-        <div id="indexSection" class="indexSection">
+        <section id="indexSection" class="indexSection">
           <div class="text">
             <div class="lensBox">
             </div>
@@ -103,9 +103,9 @@
             <span class="indexIcon"><img src="./icons/s-star.svg" alt="small star"></span>
             <span class="indexIcon"></span>
           </div>
-        </div>
+        </section>
         <!-- intro section -->
-        <div id="introductionSection">
+        <section id="introductionSection">
           <div class="introContent">
             <div class="introImgBox">
               <img
@@ -135,9 +135,9 @@
             <span class="introIcon"><img src="./icons/arrow.svg" alt=""></span>
             <span class="introIcon"><img src="./icons/b-c-star.svg" alt=""></span>
           </div>
-        </div>
+        </section>
         <!-- rules section -->
-        <div id="ruleSection">
+        <section id="ruleSection">
           <div class="ruleContent">
             <div class="ruleTextBox">
               <div class="ruleLensBox">
@@ -172,9 +172,9 @@
 
             </span>
           </div>
-        </div>
+        </section>
         <!-- criteria section -->
-        <div id="criteriaSection">
+        <section id="criteriaSection">
           <div class="criteriaContent">
             <div class="criteriaImgBox">
               <div class="criteriaImgLensBox">
@@ -237,9 +237,9 @@
               <img src="./icons/star.svg" alt="">
             </span>
           </div>
-        </div>
+        </section>
         <!-- FAQ Section -->
-        <div id="faqSection">
+        <section id="faqSection">
           <div class="faqContent">
             <div class="faqTextBox">
               <h3>Frequently Ask<br /><span>Question</span></h3>
@@ -407,9 +407,9 @@
               <img src="./icons/star.svg" alt="">
             </span>
           </div>
-        </div>
+        </section>
         <!-- timeline Section -->
-        <div id="timelineSection">
+        <section id="timelineSection">
           <div class="timelineContent">
             <div class="timelineHeading">
               <h3>Timeline</h3>
@@ -495,10 +495,10 @@
               <img src="./icons/s-star.svg" alt="">
             </span>
           </div>
-        </div>
+        </section>
 
         <!-- prize and award section -->
-        <div id="prizeSection">
+        <section id="prizeSection">
           <div class="prizeContent">
             <div class="prizeBox box1">
 <div class="boxImgBox">
@@ -547,10 +547,10 @@
               <img src="./icons/s-star.svg" alt="">
             </span>
           </div>
-        </div>
+        </section>
 
         <!-- partners section -->
-        <div id="partnerSection">
+        <section id="partnerSection">
           <div class="partnerContent">
             <div class="partnerTextBox">
               <h3>
@@ -580,9 +580,9 @@
               <img src="./icons/star.svg" alt="">
             </span>
           </div>
-        </div>
+        </section>
         <!-- Privacy section -->
-        <div id="privacySection">
+        <section id="privacySection">
           <div class="privacyContent">
             <div class="privacyTextBox">
               <div class="privacyTextHeading">
@@ -659,10 +659,10 @@
               <img src="./icons/s-star.svg" alt="">
             </span>
           </div>
-        </div>
+        </section>
 
         <!-- contact section -->
-        <div id="contactSection">
+        <section id="contactSection">
           <div class="contactContent">
             <div class="contactTextBox">
               <div class="contactTextLensBox">
@@ -738,7 +738,7 @@ Lagos State
               <img src="./icons/star.svg" alt="">
             </span>
           </div>
-        </div>
+        </section>
         </div>
       </div>
     </div>
@@ -850,6 +850,45 @@ Lagos State</a>
       Register page
      -->
      <div id="registerSection">
+      <header class="header">
+        <div class="logoBox">
+          <h1 class="logo">
+            <a href="#"><span>get</span><span>linked</span></a>
+          </h1>
+        </div>
+        <nav class="navBar">
+          <ul class="listBox">
+            <li class="navList">
+              <a href="#timelineSection" class="navLink link">Timeline</a>
+            </li>
+            <li class="navList">
+              <a href="#introductionSection" class="navLink link">Overview</a>
+            </li>
+            <li class="navList">
+              <a href="#faqSection" class="navLink link">FAQs</a>
+            </li>
+            <li class="navList">
+              <a href="#contactSection" class="navLink link">Contact</a>
+            </li>
+            <li class="navList">
+              <a href="#" class="navLink link" id="regBtn">Register</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="navMenuBox">
+          <button class="menuBtn" id="openBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+            width="24" height="24" viewBox="0 0 24 24" 
+            fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+
+          </button>
+          <button class="menuBtn" id="closeBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+            width="24" height="24" viewBox="0 0 24 24" 
+            fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </header>
       <div class="registerContent">
         <div class="formImgBox">
           <img src="./images/image13.png" alt="" class="regImg">
@@ -897,7 +936,7 @@ Lagos State</a>
         <option value="4">4</option>
       </select>
     </label>
-    <p class="ckeckBoxParagraph"><input type="checkbox" name="terms_and_conditions" required> 
+    <p class="ckeckBoxParagraph"><input type="checkbox" name="terms_and_conditions" checked> 
     I <span>
       agreed with the event terms and conditions and privacy policy
     </span>
