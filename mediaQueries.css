@@ -524,6 +524,11 @@
         height: inherit;
     }
 
+    .listIcon {
+        height: 3rem;
+        width: 3rem;
+    }
+
     .privacyImgBox::before {
         width: 100%;
         margin-top: 5rem;
@@ -650,7 +655,8 @@
         left: 50%;
         transform: translate(-50%);
         /* right: 0; */
-        width: 100%;
+        width: 80%;
+        height: 50rem;
     }
 }
 
@@ -855,6 +861,14 @@
     .indexIcon:nth-child(4) {
         top: 6%;
         left: 90%;
+    }
+
+    .popUpTextBox h3 {
+        font-size: 1.6rem;
+    }
+
+    .popUpTextBox p {
+        font-size: 1.4rem;
     }
 }
 
