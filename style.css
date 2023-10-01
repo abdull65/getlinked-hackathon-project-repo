@@ -40,15 +40,9 @@
 }
 
 @font-face {
-  font-family: "Poppins-s-bold";
-  src: url(./font/Poppins-SemiBold.ttf) format('woff2');
+  font-family: "Montserrat";
+  src: url(./font/Montserrat-font.ttf) format('woff2');
   font-weight: normal;
-}
-
-@font-face {
-  font-family: "Madani Arabic Regular";
-  src: url(./font/Madani\ Arabic\ Regular.ttf) format('woff2');
-  font-weight: lighter;
 }
 
 @font-face {
@@ -71,7 +65,7 @@ html {
 
 #body {
   display: block;
-  font-family: "Madani Arabic Regular", 'Segoe UI', sans-serif;
+  font-family: "Montserrat", 'Segoe UI', sans-serif;
   background-color: var(--cl-pri-bg);
   color: var(--cl-text);
   font-size: 1.6rem;
@@ -1613,7 +1607,7 @@ input:visited {
 } */
 
 .registerContent {
-  font-family: "Madani Arabic Regular", 'Segoe UI', sans-serif;
+  font-family: "Montserrat", 'Segoe UI', sans-serif;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   padding: 2rem;
@@ -1630,13 +1624,13 @@ input:visited {
 }
 
 .formHeading h3:last-child {
-  font-family: "Madani Arabic Regular", 'Segoe UI', sans-serif;
+  font-family: "Montserrat", 'Segoe UI', sans-serif;
   color: var(--cl-text);
   margin-bottom: 1rem;
 }
 
 .formHeading p {
-  font-family: "Madani Arabic Regular", 'Segoe UI', sans-serif;
+  font-family: "Montserrat", 'Segoe UI', sans-serif;
   font-weight: lighter;
   margin-bottom: 1rem;
   font-size: 1.4rem;
