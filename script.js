@@ -37,13 +37,9 @@ const closeAnswer = document.querySelectorAll(".closeAnswer");
 faqEl.forEach((question) => {
   question.addEventListener("click", (event) => {
     event.stopPropagation();
-    faqEl.forEach((q) => {
-      q.classList.remove("active");
-    });
     question.classList.toggle("active");
   });
 });
-
 // Sticky navigation
 const stickyIntersectionEl = document.querySelector("#indexSection");
 const stickyObs = new IntersectionObserver(
