@@ -88,3 +88,21 @@ window.onscroll = () => {
     }
   });
 };
+
+////////////////////////////////////////////////////////////
+const regBtnEl = document.querySelectorAll("#regBtn");
+const resetBtnEl = document.querySelector("#resetBtn");
+const popUpEl = document.querySelector(".popUp");
+const submitFormBtn = document.getElementById("submitFormBtn");
+const regSectionEl = document.getElementById("registerSection");
+regBtnEl.forEach((regBtn) => {
+  regBtn.addEventListener("click", () => {
+    regSectionEl.style.visibility = "visible";
+  });
+  submitFormBtn.addEventListener("click", () => {
+    popUpEl.style.visibility = "visible";
+  });
+  resetBtnEl.addEventListener("click", () => {
+    location.reload();
+  });
+});

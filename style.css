@@ -76,7 +76,7 @@ html {
   color: var(--cl-text);
   font-size: 1.6rem;
   letter-spacing: 1px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   position: relative;
 }
 
@@ -1584,10 +1584,11 @@ input:visited {
 
 /* registration form */
 #registerSection {
-  display: none;
+  display: block;
+  visibility: hidden;
   overflow: hidden;
   position: absolute;
-  top: 0;
+  top: 9rem;
   left: 50%;
   transform: translate(-50%);
   width: 100%;
@@ -1595,37 +1596,21 @@ input:visited {
   background-color: #150E28;
   z-index: 999999999;
   padding: 0 8rem 10rem;
+  transition: transform 3000ms;
 }
 
-#registerSection .header {
-  height: 6.8rem;
-  border: none;
-  padding: 0 2rem 0 8rem;
-  align-items: center;
-}
 
-#registerSection .navList {
-  font-size: 1.6rem;
-}
-
-#registerSection .header .navList:last-child {
-  position: relative;
-  background: #150E28;
-}
-
-#registerSection .header .navList:last-child::before {
+/* #registerSection .header .navList:last-child::before {
   content: "";
   background: linear-gradient(to bottom, #d434fe 50%, #ff26b9 50%);
   position: absolute;
-  top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: -1;
   margin: -1px;
   border-radius: 5px;
-
-}
+} */
 
 .registerContent {
   font-family: "Madani Arabic Regular", 'Segoe UI', sans-serif;
@@ -1674,7 +1659,6 @@ input:visited {
 
 .walkIcon img {
   margin-left: 3rem;
-  /* margin-bottom: -0.5rem */
 }
 
 .walkIcon img:nth-child(2) {
@@ -1689,8 +1673,8 @@ input:visited {
 .formTextBox {
   display: flex;
   flex-direction: column;
-  padding: 4rem;
-  background-color: rgba(255, 255, 255, 0.01);
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
 }
 
@@ -1708,7 +1692,7 @@ input:visited {
 
 .regInput {
   font-size: 1.6rem;
-  height: 3.8rem;
+  height: 3.4rem;
   width: 100%;
   background: transparent;
   border: 1.5px solid #fff;
@@ -1720,7 +1704,7 @@ input:visited {
 }
 
 .regBtn {
-  height: 3.8rem;
+  height: 3.4rem;
   margin-top: 0;
   width: 100%;
   grid-column: span 2;
@@ -1753,4 +1737,50 @@ input:visited {
   position: fixed;
   right: 1rem;
   bottom: 2rem;
+}
+
+/* popUp */
+.popUp {
+  display: block;
+  visibility: hidden;
+  background-color: rgba(21, 14, 40, 0.9);
+  border: 1px solid #d434fe;
+  width: 50rem;
+  height: 45rem;
+  /* margin-top: 2rem; */
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  transform: translateY(-50%);
+  z-index: 999999999999999999999;
+}
+
+.popUpContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.popImgBox {
+  height: 25rem;
+  width: 25rem;
+}
+
+.popImgBox img {
+  width: 100%;
+  height: 100%;
+}
+
+.popUpTextBox h3 {
+  margin-bottom: 1rem;
+}
+
+.popupBtn {
+  margin-top: 0;
 }

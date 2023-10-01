@@ -30,7 +30,7 @@
               <a href="#contactSection" class="navLink link">Contact</a>
             </li>
             <li class="navList">
-              <a href="#" class="navLink link" id="regBtn">Register</a>
+              <a href="#registerSection" class="navLink link" id="regBtn">Register</a>
             </li>
           </ul>
         </nav>
@@ -68,7 +68,7 @@
               participate in getlinked tech Hackathon 2023 stand a chance to to
               win a Big prize.
             </p>
-            <button class="indexBtn btn">Register</button>
+            <button class="indexBtn btn" id="regBtn">Register</button>
             <div class="countDownBox">
               <p>
                 <span class="count">00<span class="label">H</span></span>
@@ -850,45 +850,6 @@ Lagos State</a>
       Register page
      -->
      <div id="registerSection">
-      <header class="header">
-        <div class="logoBox">
-          <h1 class="logo">
-            <a href="#"><span>get</span><span>linked</span></a>
-          </h1>
-        </div>
-        <nav class="navBar">
-          <ul class="listBox">
-            <li class="navList">
-              <a href="#timelineSection" class="navLink link">Timeline</a>
-            </li>
-            <li class="navList">
-              <a href="#introductionSection" class="navLink link">Overview</a>
-            </li>
-            <li class="navList">
-              <a href="#faqSection" class="navLink link">FAQs</a>
-            </li>
-            <li class="navList">
-              <a href="#contactSection" class="navLink link">Contact</a>
-            </li>
-            <li class="navList">
-              <a href="#" class="navLink link" id="regBtn">Register</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="navMenuBox">
-          <button class="menuBtn" id="openBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" 
-            width="24" height="24" viewBox="0 0 24 24" 
-            fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-
-          </button>
-          <button class="menuBtn" id="closeBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" 
-            width="24" height="24" viewBox="0 0 24 24" 
-            fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-          </button>
-        </div>
-      </header>
       <div class="registerContent">
         <div class="formImgBox">
           <img src="./images/image13.png" alt="" class="regImg">
@@ -941,9 +902,28 @@ Lagos State</a>
       agreed with the event terms and conditions and privacy policy
     </span>
     </p>
-    <button type="submit" class="readMoreBtn regBtn">Register Now</button>
+    <button type="button" class="readMoreBtn regBtn" id="submitFormBtn">Register Now</button>
   </form>
   </div>
+      </div>
+      <div class="popUp">
+        <div class="popUpContent">
+          <div class="popImgBox">
+            <img src="./icons/congratulation.svg" alt="congratulation photo">
+          </div>
+          <div class="popUpTextBox">
+            <h3>
+              Congratulations <br> you have successfully Registered!
+            </h3>
+            <p>
+              yes, it was easy and you did it! <br> 
+              check your email for the next step 🤩
+            </p>
+          </div>
+          <div class="backBtnBox">
+            <button type="button" class="readMoreBtn popupBtn" id="resetBtn">back</button>
+          </div>
+        </div>
       </div>
      </div>
      <div class="backToTopBtn">
