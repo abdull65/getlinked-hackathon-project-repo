@@ -479,7 +479,7 @@ a {
 }
 
 .faqListItem.active .openAnswer {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 
 .answerBox {
