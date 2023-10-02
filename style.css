@@ -46,6 +46,12 @@
 }
 
 @font-face {
+  font-family: "Montserrat-bold";
+  src: url(./font/Montserrat-bold.ttf) format('woff2');
+  font-weight: bold;
+}
+
+@font-face {
   font-family: "Peyton";
   src: url(./font/PeytonDisplay-Light.ttf) format('woff2');
   font-weight: normal;
@@ -179,6 +185,7 @@ a {
 }
 
 .navLink {
+  font-family: "Montserrat-bold";
   color: var(--cl-text);
   transition: 300ms;
   cursor: pointer;

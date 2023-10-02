@@ -31,9 +31,6 @@ navLinkEl.forEach((link) => {
 
 ///////////////////////////////////////////////
 const faqEl = document.querySelectorAll(".faqListItem");
-const faqAnsEl = document.querySelectorAll(".answerBox");
-const openAnswer = document.querySelectorAll(".openAnswer");
-const closeAnswer = document.querySelectorAll(".closeAnswer");
 faqEl.forEach((question) => {
   question.addEventListener("click", (event) => {
     event.stopPropagation();
@@ -47,13 +44,7 @@ const stickyObs = new IntersectionObserver(
     const ent = entries[0];
     console.log(ent);
 
-    if (!ent.isIntersecting) {
-      document.body.classList.add("sticky");
-    }
-
-    if (ent.isIntersecting) {
-      document.body.classList.remove("sticky");
-    }
+    document.body.classList.toggle("sticky", !ent.isIntersecting);
   },
   {
     // In the viewport
@@ -70,16 +61,18 @@ const navLinks = document.querySelectorAll(".navLink");
 
 window.onscroll = () => {
   sectionEl.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
+    const top = window.scrollY;
+    const offset = sec.offsetTop;
+    const height = sec.offsetHeight;
+    const id = sec.getAttribute("id");
     if (top >= offset && top < offset + height) {
       navLinks.forEach((links) => {
         links.classList.remove("current");
-        document
-          .querySelector("nav a[href*=" + id + "]")
-          .classList.add("current");
+        const link = document.querySelector("nav a[href*=" + id + "]");
+
+        if (link) {
+          link.classList.add("current");
+        }
       });
     }
   });
