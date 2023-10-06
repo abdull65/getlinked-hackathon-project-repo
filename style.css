@@ -174,6 +174,7 @@ a {
   padding: 0 3rem;
   border-radius: 5px;
   cursor: pointer;
+  position: relative;
 
 }
 
@@ -182,6 +183,37 @@ a {
   color: var(--cl-text);
   transition: 300ms;
   cursor: pointer;
+  transition: all 200ms;
+}
+
+.navLink:hover {
+  background-image: linear-gradient(90deg, #ff26b9 10%, #d434fe 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.navLink:active {
+  transform: scale(1.5);
+}
+
+
+.navList:last-child:hover {
+  background-image: none;
+  background-color: var(--cl-pri-bg);
+}
+
+.navList:last-child:hover::before {
+  content: "";
+  background-image: linear-gradient(to bottom, #d434fe 50%, #ff26b9 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: 5px;
 }
 
 .current {
@@ -475,7 +507,7 @@ a {
 }
 
 .openAnswer {
-  transition: .3s;
+  transition: .5s ease-in-out;
 }
 
 .faqListItem.active .openAnswer {
@@ -486,7 +518,7 @@ a {
   margin-top: 2rem;
   max-height: 0;
   overflow: hidden;
-  transition: max-height .5s ease;
+  transition: max-height 1s ease;
 }
 
 .faqListItem.active .answerBox {
@@ -1578,13 +1610,9 @@ input:visited {
 
 /* registration form */
 #registerSection {
-  display: block;
-  visibility: hidden;
-  overflow: hidden;
+  display: none;
   position: absolute;
-  top: 9rem;
-  left: 50%;
-  transform: translate(-50%);
+  top: 9.6rem;
   width: 100%;
   height: 100vh;
   background-color: #150E28;
@@ -1593,18 +1621,28 @@ input:visited {
   transition: transform 3000ms;
 }
 
+.showReg#registerSection {
+  display: block;
+  animation: slide 1s ease forwards;
+}
 
-/* #registerSection .header .navList:last-child::before {
+.showReg#regBtnList {
+  background: var(--cl-pri-bg);
+  position: relative;
+}
+
+.showReg#regBtnList::before {
   content: "";
   background: linear-gradient(to bottom, #d434fe 50%, #ff26b9 50%);
   position: absolute;
+  top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: -1;
   margin: -1px;
   border-radius: 5px;
-} */
+}
 
 .registerContent {
   font-family: "Montserrat", 'Segoe UI', sans-serif;
@@ -1686,7 +1724,7 @@ input:visited {
 
 .regInput {
   font-size: 1.6rem;
-  height: 3.4rem;
+  height: 4rem;
   width: 100%;
   background: transparent;
   border: 1.5px solid #fff;
@@ -1741,12 +1779,14 @@ input:visited {
   border: 1px solid #d434fe;
   width: 50rem;
   height: 45rem;
-  /* margin-top: 2rem; */
   position: absolute;
-  top: 45%;
+  top: 5%;
   left: 30%;
-  transform: translateY(-50%);
   z-index: 999999999999999999999;
+}
+
+.popUp_animation {
+  animation: popUp .3s ease forwards;
 }
 
 .popUpContent {
@@ -1759,6 +1799,8 @@ input:visited {
   width: 100%;
   padding: 2rem;
   gap: 2rem;
+  transition: 5s;
+  /* animation: popUp 5s ease forwards; */
 }
 
 .popImgBox {
@@ -1777,4 +1819,34 @@ input:visited {
 
 .popupBtn {
   margin-top: 0;
+}
+
+
+/* animation */
+@keyframes popUp {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+@keyframes slide {
+  0% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
 }

@@ -34,7 +34,12 @@ const faqEl = document.querySelectorAll(".faqListItem");
 faqEl.forEach((question) => {
   question.addEventListener("click", (event) => {
     event.stopPropagation();
-    question.classList.toggle("active");
+    faqEl.forEach((q) => {
+      if (q.classList.contains("active")) {
+        q.classList.remove("active");
+      }
+      question.classList.add("active");
+    });
   });
 });
 // Sticky navigation
@@ -58,38 +63,47 @@ stickyObs.observe(stickyIntersectionEl);
 ///////////////////////////////////////////////////
 const sectionEl = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navLink");
+let currentLink = null;
 
 window.onscroll = () => {
   sectionEl.forEach((sec) => {
-    const top = window.scrollY;
-    const offset = sec.offsetTop;
+    const scrollPosition = window.scrollY;
+    const offsetTop = sec.offsetTop;
     const height = sec.offsetHeight;
     const id = sec.getAttribute("id");
-    if (top >= offset && top < offset + height) {
-      navLinks.forEach((links) => {
-        links.classList.remove("current");
-        const link = document.querySelector("nav a[href*=" + id + "]");
 
-        if (link) {
-          link.classList.add("current");
+    if (scrollPosition >= offsetTop && scrollPosition < offsetTop + height) {
+      const link = document.querySelector('nav a[href*="' + id + '"]');
+      if (link && link !== currentLink) {
+        if (currentLink) {
+          currentLink.classList.remove("current");
         }
-      });
+        link.classList.add("current");
+        currentLink = link;
+      }
     }
   });
 };
 
 ////////////////////////////////////////////////////////////
 const regBtnEl = document.querySelectorAll("#regBtn");
+const regBtnListEl = document.querySelector("#regBtnList");
 const resetBtnEl = document.querySelector("#resetBtn");
 const popUpEl = document.querySelector(".popUp");
 const submitFormBtn = document.getElementById("submitFormBtn");
 const regSectionEl = document.getElementById("registerSection");
 regBtnEl.forEach((regBtn) => {
   regBtn.addEventListener("click", () => {
-    regSectionEl.style.visibility = "visible";
+    regSectionEl.classList.add("showReg");
+    regBtnListEl.classList.add("showReg");
+    // regSectionEl.classList.add("slide");
   });
   submitFormBtn.addEventListener("click", () => {
     popUpEl.style.visibility = "visible";
+    popUpEl.classList.add("popUp_animation");
+    popUpEl.addEventListener("animationend", () => {
+      popUpEl.classList.remove("popUp_animation");
+    });
   });
   resetBtnEl.addEventListener("click", () => {
     location.reload();
