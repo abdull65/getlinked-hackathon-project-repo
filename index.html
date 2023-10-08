@@ -828,6 +828,7 @@ Lagos State</a>
         <span class="footerIcon">
           <img src="./icons/star.svg" alt="">
         </span>
+        </div>
     </footer>
 
 
@@ -835,8 +836,9 @@ Lagos State</a>
       Register page
      -->
      <div id="registerSection">
-      <div class="registerContent">
+       <div class="registerContent">
         <div class="formImgBox">
+       
           <img src="./images/image13.png" alt="" class="regImg">
         </div>
         <div class="formTextBox">
@@ -854,20 +856,20 @@ Lagos State</a>
   <form action="/register" method="post" class="registerForm">
 
     <label for="name"><span class="labelTitle">Team's Name</span>
-      <input type="text" name="team_name" class="regInput" placeholder="Enter the name of your group">
+      <input type="text" name="team_name" id="name" class="regInput" placeholder="Enter the name of your group">
     </label>
     <label for="phone"><span class="labelTitle"> Phone</span>
-      <input type="text" name="phone" class="regInput" placeholder="Enter your phone number">
+      <input type="text" name="phone" id="phone" class="regInput" placeholder="Enter your phone number">
     </label>
     <label for="email"><span class="labelTitle">Email</span>
-      <input type="email" name="email" class="regInput" placeholder="Enter your email address">
+      <input type="email" name="email" id="email" class="regInput" placeholder="Enter your email address">
     </label>
     <label for="project_topic"><span class="labelTitle">Project Topic</span>
-      <input type="text" name="project_topic" class="regInput" placeholder="What is your group project topic">
+      <input type="text" name="project_topic" id="project_topic" class="regInput" placeholder="What is your group project topic">
     </label>
     
     <label for="category"><span class="labelTitle">Category</span>
-      <select name="category" class="selectCat regInput">
+      <select name="category" id="category" class="selectCat regInput">
         <option value="">Select your category</option>
         <option value="A">Category A</option>
         <option value="B">Category B</option>
@@ -875,7 +877,7 @@ Lagos State</a>
       </select>
     </label>
     <label for="group_size"><span class="labelTitle">group Size</span>
-      <select name="group_size" class="selectGrp regInput">
+      <select name="group_size" id="group_size" class="selectGrp regInput">
         <option value="">Select group size</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -889,7 +891,26 @@ Lagos State</a>
     </p>
     <button type="button" class="readMoreBtn regBtn" id="submitFormBtn">Register Now</button>
   </form>
+  <div class="regImgLensBox">
   </div>
+  </div>
+  <div class="lensBox">
+            </div>
+            <div class="regIconBox">
+        
+              <span class="regIcon">
+                <img src="./icons/s-c-star.svg" alt="">
+              </span>
+        <span class="regIcon">
+          <img src="./icons/s-star.svg" alt="">
+        </span>
+        <span class="regIcon">
+          <img src="./icons/s-c-star.svg" alt="">
+        </span>
+        <span class="regIcon">
+          <img src="./icons/s-star.svg" alt="">
+        </span>
+        </div>
       </div>
       <div class="popUp">
         <div class="popUpContent">
@@ -912,7 +933,7 @@ Lagos State</a>
       </div>
      </div>
      <div class="backToTopBtn">
-      <a href="#" class="link toTop"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg></a>
+      <p> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg></p>
      </div>
      <script src="script.js" type="text/javascript"></script>
   </body>
