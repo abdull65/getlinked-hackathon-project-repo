@@ -358,7 +358,6 @@ a {
 #contactSection {
   border-bottom: 1px solid var(--cl-border);
   padding: 10rem 12rem;
-  z-index: 999;
   position: relative;
 }
 
@@ -375,6 +374,8 @@ a {
   column-gap: 8rem;
   align-items: center;
   justify-content: center;
+  z-index: 9999;
+
 }
 
 .introTextBox h3,
@@ -1006,6 +1007,8 @@ a {
   padding: 6rem;
   background: rgba(255, 255, 255, 0.04);
   border-radius: 5px;
+  z-index: 999;
+
 }
 
 .formHeading {
@@ -1025,6 +1028,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 999;
 }
 
 input {
