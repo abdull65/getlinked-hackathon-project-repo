@@ -159,7 +159,8 @@ regBtnEl.forEach((regBtn) => {
     }
 
     // Validate phone number using regex (assuming 10-digit US format)
-    const phoneRegex = /^\d{10}$/;
+    const phoneRegex = /^\d{9,12}$/;
+
     if (!phoneRegex.test(phoneEl.value || phoneEl === "")) {
       phoneEl.classList.add("warn");
       // alert("Invalid phone number");
