@@ -358,6 +358,7 @@ a {
 #contactSection {
   border-bottom: 1px solid var(--cl-border);
   padding: 10rem 12rem;
+  z-index: 999;
   position: relative;
 }
 
