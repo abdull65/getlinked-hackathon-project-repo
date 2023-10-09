@@ -100,7 +100,6 @@ const inputEl = document.querySelectorAll(".regInput");
 
 const submitFormBtn = document.getElementById("submitFormBtn");
 const regSectionEl = document.getElementById("registerSection");
-
 regBtnEl.forEach((regBtn) => {
   regBtn.addEventListener("click", () => {
     regSectionEl.classList.add("showReg");
@@ -110,7 +109,6 @@ regBtnEl.forEach((regBtn) => {
       behavior: "smooth",
     });
   });
-
   submitFormBtn.addEventListener("click", () => {
     inputEl.forEach((input) => {
       if (input.value === "") {
@@ -184,6 +182,14 @@ regBtnEl.forEach((regBtn) => {
   resetBtnEl.addEventListener("click", () => {
     location.reload();
   });
+  if (regSectionEl.classList.contains("showReg")) {
+    navLinkEl.forEach((link) => {
+      link.addEventListener("click", () => {
+        console.log("working");
+        regSectionEl.classList.remove("showReg");
+      });
+    });
+  }
 });
 document.querySelector(".backToTopBtn").addEventListener("click", () => {
   window.scrollTo({

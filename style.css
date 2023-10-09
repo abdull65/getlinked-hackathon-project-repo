@@ -1822,6 +1822,7 @@ input:visited {
   right: 1rem;
   bottom: 2rem;
   cursor: pointer;
+  z-index: 99999;
 }
 
 /* popUp */
