@@ -35,14 +35,14 @@ faqEl.forEach((question) => {
   question.addEventListener("click", (event) => {
     event.stopPropagation();
     faqEl.forEach((q) => {
-      if (q.classList.contains("active")) {
+      if (q !== question && q.classList.contains("active")) {
         q.classList.remove("active");
       }
-      question.classList.add("active");
     });
+    question.classList.toggle("active");
   });
 });
-// Sticky navigation
+//////////////////// Sticky navigation ////////////////////////////
 const stickyIntersectionEl = document.querySelector("#indexSection");
 const stickyObs = new IntersectionObserver(
   function (entries) {
