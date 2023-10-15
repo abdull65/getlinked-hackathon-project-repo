@@ -519,7 +519,7 @@ a {
 }
 
 .openAnswer {
-  transition: .8s ease-in-out;
+  transition: .6s ease-in-out;
 }
 
 .faqListItem.active .openAnswer {
@@ -530,7 +530,7 @@ a {
   margin-top: 2rem;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1s ease-in-out;
+  transition: max-height .8s ease-in-out;
 }
 
 .faqListItem.active .answerBox {
